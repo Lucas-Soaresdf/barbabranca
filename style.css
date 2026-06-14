@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+.menu-mobile {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 900px) {
+
+    .contato-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa iframe {
+        min-height: 250px;
+    }
+
+    .pagina-contato {
+        padding-top: 6rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaria: #0f0f0f;
+    --secundaria: #7c3aed;
+    --claro: #f5f5f5;
+    --cinza: #a1a1aa;
+    --card: #18181b;
+}
+
+body {
+    background: var(--primaria);
+    color: var(--claro);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    justify-self: start;
+    margin-left: 25px;
+    font-size: 1.7rem;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--claro);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--secundaria);
+    transition: 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: var(--secundaria);
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 120px;
+}
+
+
+
+.cabecalho p {
+    color: var(--cinza);
+    font-size: 1.2rem;
+}
+
+
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sobre-imagem img {
+    width: 420px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.sobre-texto {
+    max-width: 500px;
+}
+
+.sobre-texto p {
+    color: var(--cinza);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 900px) {
+
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .sobre-imagem img {
+        width: 100%;
+
+        height: 280px;
+    }
+
+    .sobre-texto {
+        text-align: center;
+    }
+}
+
+.sobre {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--cinza);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+.galeria {
+    padding: 5rem 2rem;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.img-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #27272a;
+}
+
+.img-item img:hover {
+    transform: scale(1.03);
+
+    border-color: var(--secundaria);
+}
+
+.galeria-botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.botao-trabalhos {
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-trabalhos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+    opacity: 0.9;
+}
+
+
+
+.agendamento {
+    position: relative;
+    width: 100%;
+    padding: 6rem 2rem;
+
+    background-image: url('img/agendamento.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+.agendamento::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.agendamento h2,
+.agendamento p,
+.agendamento .botao-agendar {
+    position: relative;
+    z-index: 2;
+}
+
+.agendamento h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.agendamento p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--cinza);
+}
+
+.botao-agendar {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-agendar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+.container {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+/* ========================= */
+/* ÁREA DE AGENDAMENTO */
+/* ========================= */
+#centro {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.centro {
+    font-size: 45px;
+}
+
+.agendamento-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0px;
+    align-items: stretch;
+}
+
+#form-agendamento {
+    flex: 2;
+}
+
+.whatsapp-box {
+    flex: 1;
+    background: #18181b;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.whatsapp-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-box p {
+    color: var(--cinza);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.botao-whatsapp-direto {
+    display: block;
+    text-decoration: none;
+    background: #25d366;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-whatsapp-direto:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* ========================= */
+/* INPUT DE IMAGEM */
+/* ========================= */
+
+.upload-label {
+    display: block;
+    background: #111;
+    border: 2px dashed var(--secundaria);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.upload-label:hover {
+    background: #1a1a1a;
+    border-color: #9333ea;
+}
+
+#nome-arquivo {
+    text-align: center;
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+
+
+form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #18181b;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+form input,
+form textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+
+    transition: 0.3s ease;
+}
+form input:focus,
+form textarea:focus {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.15);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+form textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+form button {
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    opacity: 0.8;
+}
+
+.pagina-contato {
+    padding: 7rem 1.5rem 3rem;
+}
+
+.pagina-contato h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+.contato-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    align-items: stretch;
+}
+
+.informacoes {
+    background: #18181b;
+    padding: 3rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.informacoes h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item h2 {
+    color: var(--secundaria);
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.info-item p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.mapa {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+}
+
+.botao-instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-instagram:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(131, 58, 180, 0.3);
+    opacity: 0.95;
+
+}
+
+.botao-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.7rem;
+    padding: 10px;
+    border-radius: 8px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-whatsapp:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('img/estudio.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin-left: 8%;
+}
+
+.hero-conteudo h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.hero-conteudo p {
+    font-size: 1.2rem;
+    color: var(--cinza);
+    margin-bottom: 2rem;
+}
+
+.botao-hero {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botao-hero:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+.galeria p {
+    text-align: center;
+    max-width: 600px;
+    margin: -1.5rem auto 3rem;
+    color: var(--cinza);
+    font-size: 1rem;
+}
+
+
+.container h1 {
+    text-align: center;
+}
+
+.subtitulo-trabalhos {
+    max-width: 700px;
+    margin: 1rem auto 3rem;
+    text-align: center;
+    color: var(--cinza);
+    font-size: 1.1rem;
+}
+
+
+
+@media (max-width: 768px) {
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+
+
+
+    .menu-mobile {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0f0f0f;
+        display: none !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 999;
+    }
+
+    .menu.ativo {
+        display: flex !important;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+     .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho p {
+        font-size: 1rem;
+    }
+
+    .cabecalho {
+        padding: 1.5rem;
+    }
+
+      .agendamento-container {
+        flex-direction: column;
+    }
+
+    .whatsapp-box {
+        width: 100%;
+    }
+     .hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-conteudo {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-conteudo p {
+        font-size: 1rem;
+    }
+
+    .sobre-container {
+        gap: 2rem;
+    }
+
+    .sobre-imagem img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .galeria-imagens {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-contato {
+        padding: 7rem 1rem 2rem;
+    }
+
+    .pagina-contato h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contato-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .informacoes {
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .informacoes p {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .botao-whatsapp,
+    .botao-instagram {
+        width: 100%;
+    }
+
+    .mapa iframe {
+        min-height: 300px;
+        height: 300px;
+    }
+
+}

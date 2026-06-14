@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendamentos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">BarbaBranca Tattoo</div>
+
+    <div class="menu-mobile" id="menu-mobile">☰</div>
+
+    <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trabalhos.html">Trabalhos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
+
+
+<section class="container">
+
+
+
+    <div class="pagina-topo">
+    <h1 class="centro">Agende sua Tattoo</h1>
+
+    <p id="centro">
+        Envie sua ideia, referências e informações.
+        Entraremos em contato para orçamento e agendamento.
+    </p>
+</div>
+    <div class="agendamento-container">
+
+      
+        <!-- FORMULÁRIO -->
+        <form id="form-agendamento">
+
+            <label>Nome completo*</label>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Nome completo"
+                required
+            >
+
+            <label>Descreva sua ideia*</label>
+            <textarea
+                id="descricao"
+                placeholder="Conte com detalhe a ideia de Tattoo que você tem..."
+            ></textarea>
+
+            <label>Tamanho estimado</label>
+            <input
+                type="text"
+                id="tamanho"
+                placeholder="Tamanho (ex: 10x15)"
+            >
+
+            <label>Local do Corpo</label>
+            <input
+                type="text"
+                id="local"
+                placeholder="Local do corpo"
+            >
+
+            <label class="upload-label" for="referencia">
+                Escolher imagem de referência (Opcional)
+            </label>
+
+            <input
+                type="file"
+                id="referencia"
+                accept="image/*"
+                hidden
+            >
+
+            <p id="nome-arquivo">
+                Nenhuma imagem selecionada
+            </p>
+
+            <button type="submit">
+                Enviar para WhatsApp
+            </button>
+
+        </form>
+
+        <!-- CARD WHATSAPP -->
+        <div class="whatsapp-box">
+
+            <h3>Atendimento Rápido</h3>
+
+            <p>
+                Prefere falar diretamente comigo?
+                Tire dúvidas, envie referências e receba seu orçamento pelo WhatsApp.
+            </p>
+
+            <a
+                href="https://wa.me/5583981313233"
+                target="_blank"
+                class="botao-whatsapp-direto"
+            >
+                 Chamar no WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
