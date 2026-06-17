@@ -703,7 +703,8 @@ form button:hover {
         padding: 1.5rem;
     }
 
-      .agendamento-container {
+     .agendamento-container {
+        display: flex;
         flex-direction: column;
     }
 
