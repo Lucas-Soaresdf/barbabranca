@@ -1,11 +1,26 @@
-const menuMobile = document.getElementById('menu-mobile');
-const menu = document.getElementById('menu');
+//  página Trabalhos
+const filtroCategorias = document.getElementById('filtro-categorias');
 
-if (menuMobile && menu) {
-    menuMobile.addEventListener('click', () => {
-        menu.classList.toggle('ativo');
+if (filtroCategorias) {
+    const botoesFiltro = filtroCategorias.querySelectorAll('.filtro-btn');
+    const itensGaleria = document.querySelectorAll('#galeria-imagens .img-item');
+
+    botoesFiltro.forEach((botao) => {
+        botao.addEventListener('click', () => {
+            const categoria = botao.dataset.filtro;
+
+            botoesFiltro.forEach((b) => b.classList.remove('ativo'));
+            botao.classList.add('ativo');
+
+            itensGaleria.forEach((item) => {
+                const mostrar = categoria === 'todas' || item.dataset.categoria === categoria;
+                item.classList.toggle('escondido', !mostrar);
+            });
+        });
     });
 }
+
+// agendamento
 
 const form = document.getElementById('form-agendamento');
 

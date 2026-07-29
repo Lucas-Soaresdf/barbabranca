@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
 .menu-mobile {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
+    display: none !important;
 }
 
 @media (max-width: 900px) {
@@ -18,7 +15,7 @@
     }
 
     .pagina-contato {
-        padding-top: 6rem;
+        padding-top: 9rem;
     }
 }
 
@@ -201,6 +198,41 @@ section {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
+}
+
+.filtro-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: -1.5rem auto 3rem;
+}
+
+.filtro-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--cinza);
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.filtro-btn:hover {
+    border-color: var(--secundaria);
+    color: var(--claro);
+}
+
+.filtro-btn.ativo {
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    border-color: transparent;
+    color: white;
+}
+
+.img-item.escondido {
+    display: none;
 }
 
 .galeria-imagens {
@@ -466,6 +498,31 @@ form button:hover {
     opacity: 0.8;
 }
 
+.dicas-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dica-card {
+    background: #18181b;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dica-card h3 {
+    color: var(--secundaria);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.dica-card p {
+    color: var(--cinza);
+    line-height: 1.7;
+}
+
 .pagina-contato {
     padding: 7rem 1.5rem 3rem;
 }
@@ -572,7 +629,8 @@ form button:hover {
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     background-image: url('img/estudio.webp');
     background-size: cover;
     background-position: center;
@@ -653,42 +711,36 @@ form button:hover {
 
       .navbar {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         padding: 1rem 1.5rem;
-    }
-
-
-
-    .menu-mobile {
-        display: block;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    .menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #0f0f0f;
-        display: none !important;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 2rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        z-index: 999;
-    }
-
-    .menu.ativo {
-        display: flex !important;
+        row-gap: 0.6rem;
     }
 
     .logo {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
         font-size: 1.4rem;
+    }
+
+    .menu {
+        position: static;
+        width: 100%;
+        background: transparent;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem 1.5rem;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
     }
 
      .cabecalho h1 {
@@ -703,9 +755,8 @@ form button:hover {
         padding: 1.5rem;
     }
 
-     .agendamento-container {
-        display: flex;
-        flex-direction: column;
+      .agendamento-container {
+        grid-template-columns: 1fr;
     }
 
     .whatsapp-box {
@@ -742,8 +793,12 @@ form button:hover {
         grid-template-columns: 1fr;
     }
 
+     .galeria {
+        padding-top: 9rem;
+    }
+
     .pagina-contato {
-        padding: 7rem 1rem 2rem;
+        padding: 9rem 1rem 2rem;
     }
 
     .pagina-contato h1 {

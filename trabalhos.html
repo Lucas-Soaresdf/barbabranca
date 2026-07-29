@@ -1,56 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trabalhos</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="logo">BarbaBranca Tattoo</div>
-  <div class="menu-mobile" id="menu-mobile">☰</div>
+  <nav class="navbar">
+    <div class="logo">BarbaBranca Tattoo</div>
 
-  <ul class="menu" id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="agendamento.html">Agendar</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-</nav>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="agendamento.html">Agendar</a></li>
+      
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 
-<section class="galeria">
+  <section class="galeria">
 
-  <h2>Portfólio</h2>
+    <h2>Portfólio</h2>
 
-<p class="subtitulo-trabalhos">
-    Cada tatuagem conta uma história. Confira alguns dos trabalhos realizados no estúdio BarbaBranca Tattoo.
-</p>
+    <p class="subtitulo-trabalhos">
+      Cada tatuagem conta uma história. Confira alguns dos trabalhos realizados no estúdio BarbaBranca Tattoo.
+    </p>
 
-  <div class="galeria-imagens">
-    <div class="img-item"><img src="img/tattoo1.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo2.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo3.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo4.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo5.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo6.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo7.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo8.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo9.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo10.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo11.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo12.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo13.jpeg"></div>
+    
    
-    <div class="img-item"><img src="img/tattoo15.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo16.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo17.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo18.jpeg"></div>
-    <div class="img-item"><img src="img/tattoo19.jpeg"></div>
-  </div>
+    <div class="filtro-categorias" id="filtro-categorias">
+      <button class="filtro-btn ativo" data-filtro="todas">Todas</button>
+      <button class="filtro-btn" data-filtro="realismo">Realismo</button>
+      <button class="filtro-btn" data-filtro="delicadas">Delicadas / Traço Fino</button>
+      <button class="filtro-btn" data-filtro="coberturas">Coberturas</button>
+      <!-- <button class="filtro-btn" data-filtro="blackwork">Blackwork</button> -->
+    </div>
 
-</section>
-<script src="script.js"></script>
+    <div class="galeria-imagens" id="galeria-imagens">
+      <!-- tattoos delicas primeiro ne bb -->
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada1.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada2.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada3.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada4.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada5.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada6.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada7.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada8.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada9.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada10.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada11.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada12.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada13.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada14.jpeg"></div>
+      <div class="img-item" data-categoria="delicadas"><img src="img/delicada15.jpeg"></div>
+
+
+      <!-- em seguida as coberturas ta ok -->
+
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura1.png"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura2.jpeg"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura3.jpeg"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura4.jpeg"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura5.jpeg"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura6.jpeg"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura77.jpeg"></div>
+      <div class="img-item" data-categoria="coberturas"><img src="img/cobertura88.jpeg"></div>
+
+      <!-- agora realismo  -->
+
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo1.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo2.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo3.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo4.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo5.jpeg"></div>
+      
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo7.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo8.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo9.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo10.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo11.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo12.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo13.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo14.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo15.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo16.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo17.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo18.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo19.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo20.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo21.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo22.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo23.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo24.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo25.jpeg"></div>
+      <div class="img-item" data-categoria="realismo"><img src="img/realismo26.jpeg"></div>
+     
+         
+    </div>
+
+  </section>
+  <script src="script.js"></script>
 </body>
+
 </html>
