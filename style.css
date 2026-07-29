@@ -631,7 +631,7 @@ form button:hover {
 .hero {
     min-height: 100vh;
     min-height: 100dvh;
-    background-image: url('img/estudio.webp');
+    background-image: url('img/agendamento.avif');
     background-size: cover;
     background-position: center;
     position: relative;
