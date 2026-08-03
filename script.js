@@ -53,3 +53,21 @@ Tenho uma imagem de referência para enviar.`;
         window.open(url, '_blank');
     });
 }
+
+// botao para voltar ao topo
+
+const btnTopo = document.getElementById('btn-topo');
+
+if (btnTopo) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            btnTopo.classList.add('visivel');
+        } else {
+            btnTopo.classList.remove('visivel');
+        }
+    });
+
+    btnTopo.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
