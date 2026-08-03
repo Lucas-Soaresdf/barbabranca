@@ -20,3 +20,6 @@ Site profissional desenvolvido para o estúdio BarbaBranca Tattoo.
 ## Autor
 
 Lucas Soares
+
+- LinkedIn: [linkedin.com/in/lucassoares-dev](https://linkedin.com/in/lucassoares-dev)
+- Portfólio: [lsportifolio-one.vercel.app](https://lsportifolio-one.vercel.app)
