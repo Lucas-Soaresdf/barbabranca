@@ -833,6 +833,7 @@ form button:hover {
     }
     /* footer */
 
+<<<<<<< HEAD
     footer {
         padding: 2rem 1rem;
         font-size: 0.8rem;
@@ -908,3 +909,6 @@ footer a:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(124, 58, 237, 0.5);
 }
+=======
+}
+>>>>>>> 0e368861b0107361c11017f7454f39984b5d10b7
